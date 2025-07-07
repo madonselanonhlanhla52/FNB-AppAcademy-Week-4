@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css"> 
+        <meta charset="UTF-8" />
+        <title>Number Addition with Validation</title>
+    </head>
+    <body>
+        <p id="outputText"></p>
+        <script>
+            var num1 = "10";
+            var num2 = "2";
+
+            
+            function stringToNumber(text) {
+                return parseInt(text);
+            }
+            
+            var parsedNum1 = stringToNumber(num1);
+            var parsedNum2 = stringToNumber(num2);
+
+            if (isNaN(parsedNum1) || isNaN(parsedNum2)) {
+                document.getElementById("outputText").innerHTML = "You have not entered valid numbers. Please try again.";
+            } else {
+                document.getElementById("outputText").innerHTML = "The sum is: " + (parsedNum1 + parsedNum2);
+            }
+        </script>
+    </body>
+</html>
